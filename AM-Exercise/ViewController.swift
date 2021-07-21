@@ -30,9 +30,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             switch result {
                 case .success(let downLoadedPhotos):
                     self.photos.append(contentsOf: downLoadedPhotos)
-                    self.collectionView.reloadData()
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
                 case .failure(let error):
-                    self.collectionView.reloadData()
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
             }
         }
     }
@@ -83,6 +87,7 @@ extension UIImageView {
             switch result {
                 case .success(let image):
                     DispatchQueue.main.async {
+                        print("fetched \(urlString)")
                         self.image = image
                     }
                 case .failure:
