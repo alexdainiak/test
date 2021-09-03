@@ -18,29 +18,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
 
+    var handleDataCallback: ((Result<[Photo], NetworkClient.Error>) -> Void)!
     let networkClient = NetworkClient()
 
     var photos = [Photo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
-        networkClient.fetchImages(for: "ball") { result in
-            switch result {
-                case .success(let downLoadedPhotos):
-                    self.photos.append(contentsOf: downLoadedPhotos)
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-            }
+
+        handleDataCallback = { result in
+            self.handleData(result: result)
         }
+
+        networkClient.fetchImages(for: "ball", completion: handleDataCallback)
     }
 
+    func handleData(result: Result<[Photo], NetworkClient.Error>) {
+        switch result {
+            case .success(let downLoadedPhotos):
+                self.photos.append(contentsOf: downLoadedPhotos)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+        }
+    }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -77,7 +83,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.label.text = "Author: " //Author of photo
         return cell
     }
-    
 }
 
 extension UIImageView {
