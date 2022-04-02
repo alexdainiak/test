@@ -9,14 +9,19 @@
 import Foundation
 import UIKit
 
-class NetworkClient {
+enum Error: Swift.Error {
+    case general
+    case invalid(response: URLResponse?)
+    case network(error: Swift.Error, response: URLResponse?)
+    case parsing(error: Swift.Error)
+}
 
-    enum Error: Swift.Error {
-        case general
-        case invalid(response: URLResponse?)
-        case network(error: Swift.Error, response: URLResponse?)
-        case parsing(error: Swift.Error)
-    }
+protocol NetworkClientProtocol {
+     func fetchImages(for query: String, completion: @escaping (Result<[Photo], Error>) -> Void)
+     func fetchImage(on urlString: String, completion: @escaping (Result<UIImage, Error>) -> Void)
+}
+
+class NetworkClient: NetworkClientProtocol {
 
      private let urlSession = URLSession.shared
      private let apiKey = "22577733-edb14e0d0f3f9c1a039c57e48"
