@@ -11,20 +11,19 @@ import UIKit
 
 let imageCache = NSCache<NSString, UIImage>()
 
-enum Error: Swift.Error {
-     case general
-     case invalid(response: URLResponse?)
-     case network(error: Swift.Error, response: URLResponse?)
-     case parsing(error: Swift.Error)
-     case noData
-}
-
 protocol NetworkClientProtocol {
-     func fetchImages(for query: String, page: Int, completion: @escaping (Result<[Photo], Error>) -> Void)
-     func fetchImage(on urlString: String, completion: @escaping (Result<UIImage, Error>) -> Void) -> URLSessionDataTask?
+     func fetchImages(for query: String, page: Int, completion: @escaping (Result<[Photo], NetworkClient.Error>) -> Void)
+     func fetchImage(on urlString: String, completion: @escaping (Result<UIImage, NetworkClient.Error>) -> Void) -> URLSessionDataTask?
 }
 
 final class NetworkClient: NetworkClientProtocol {
+     
+     enum Error: Swift.Error {
+          case general
+          case invalid(response: URLResponse?)
+          case network(error: Swift.Error, response: URLResponse?)
+          case parsing(error: Swift.Error)
+     }
      
      private let urlSession = URLSession.shared
      private let apiKey = "22577733-edb14e0d0f3f9c1a039c57e48"

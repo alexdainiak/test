@@ -21,47 +21,25 @@ final class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    private var task: URLSessionDataTask?
-    private var imageUrl: String?
-    var networkClient: NetworkClientProtocol?
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.networkClient = NetworkClient()
-    }
+    private var viewModel: PhotoCellViewModel?
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        task?.cancel()
-        task = nil
+        viewModel?.cancelTask()
         imageView.image = nil
     }
     
     func fillData(photo: Photo) {
-        imageUrl = photo.previewURL ?? photo.largeImageURL
-        label.text = "Author: \n\(photo.user)"
-        descriptionLabel.text = "Photo ID:\n\(photo.id)"
+        viewModel = PhotoCellViewModel(photo: photo, networkClient: NetworkClient())
+        
+        label.text = viewModel?.labelText
+        descriptionLabel.text = viewModel?.descriptionText
     }
     
     func setImage(on urlString: String) {
-        if task == nil {
-            task = networkClient?.fetchImage(on: urlString) { [weak self] result in
-                guard
-                    let self = self,
-                    self.imageUrl == urlString
-                else { return }
-                
-                switch result {
-                case .success(let image):
-                    DispatchQueue.main.async {
-                        //print("fetched \(urlString)")
-                        self.imageView.image = image
-                    }
-                case .failure:
-                    DispatchQueue.main.async {
-                        self.imageView.image = nil
-                    }
-                }
+        viewModel?.setImage(on: urlString) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.imageView.image = image
             }
         }
     }

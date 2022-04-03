@@ -17,10 +17,11 @@
 		27D56EC426A6F3EC0076B828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D56EC326A6F3EC0076B828 /* Assets.xcassets */; };
 		27D56EC726A6F3EC0076B828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D56EC526A6F3EC0076B828 /* LaunchScreen.storyboard */; };
 		A703E0A427F87B3C00DC418F /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E0A327F87B3C00DC418F /* MainScreenViewModel.swift */; };
-		A703E0A627F87C5300DC418F /* PhotoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E0A527F87C5300DC418F /* PhotoRepositoryImpl.swift */; };
-		A703E0AF27F87D3600DC418F /* BaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E0AE27F87D3600DC418F /* BaseTarget.swift */; };
-		A703E0B127F87D9F00DC418F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E0B027F87D9F00DC418F /* NetworkService.swift */; };
 		A7660E1827FA0EB2003708C2 /* AM_ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7660E1727FA0EB2003708C2 /* AM_ExerciseTests.swift */; };
+		A7660E2227FA0FF4003708C2 /* MainScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7660E2127FA0FF4003708C2 /* MainScreenViewModelTests.swift */; };
+		A7660E2427FA100D003708C2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7660E2327FA100D003708C2 /* ViewModel.swift */; };
+		A7660E2627FA1078003708C2 /* NetworkClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7660E2527FA1078003708C2 /* NetworkClientMock.swift */; };
+		A7660E2827FA1D3B003708C2 /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7660E2727FA1D3B003708C2 /* PhotoCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +47,12 @@
 		27D56EC626A6F3EC0076B828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D56EC826A6F3EC0076B828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A703E0A327F87B3C00DC418F /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
-		A703E0A527F87C5300DC418F /* PhotoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepositoryImpl.swift; sourceTree = "<group>"; };
-		A703E0AE27F87D3600DC418F /* BaseTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTarget.swift; sourceTree = "<group>"; };
-		A703E0B027F87D9F00DC418F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A7660E1527FA0EB2003708C2 /* AM-ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AM-ExerciseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7660E1727FA0EB2003708C2 /* AM_ExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AM_ExerciseTests.swift; sourceTree = "<group>"; };
+		A7660E2127FA0FF4003708C2 /* MainScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelTests.swift; sourceTree = "<group>"; };
+		A7660E2327FA100D003708C2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A7660E2527FA1078003708C2 /* NetworkClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientMock.swift; sourceTree = "<group>"; };
+		A7660E2727FA1D3B003708C2 /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +73,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		275AA55626A6F80D008B8877 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		27D56EB026A6F3E90076B828 = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +96,6 @@
 			children = (
 				A703E0A227F87B1000DC418F /* Services */,
 				A703E0A027F87AEE00DC418F /* Feature */,
-				A703E09E27F87AE300DC418F /* Data */,
-				275AA55626A6F80D008B8877 /* Helpers */,
 				27D56EBC26A6F3E90076B828 /* AppDelegate.swift */,
 				27D56EC026A6F3E90076B828 /* Main.storyboard */,
 				27D56EC326A6F3EC0076B828 /* Assets.xcassets */,
@@ -110,14 +103,6 @@
 				27D56EC826A6F3EC0076B828 /* Info.plist */,
 			);
 			path = "AM-Exercise";
-			sourceTree = "<group>";
-		};
-		A703E09E27F87AE300DC418F /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				A703E0A727F87C9300DC418F /* MainScreen */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		A703E0A027F87AEE00DC418F /* Feature */ = {
@@ -142,19 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				275AA55726A6F828008B8877 /* NetworkClient.swift */,
-				A703E0AE27F87D3600DC418F /* BaseTarget.swift */,
-				A703E0B027F87D9F00DC418F /* NetworkService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		A703E0A727F87C9300DC418F /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				A7660E0D27FA07C6003708C2 /* Dto */,
-				A703E0A527F87C5300DC418F /* PhotoRepositoryImpl.swift */,
-			);
-			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		A7660E0927F8B74A003708C2 /* Views */ = {
@@ -170,15 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				A703E0A327F87B3C00DC418F /* MainScreenViewModel.swift */,
+				A7660E2727FA1D3B003708C2 /* PhotoCellViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A7660E0D27FA07C6003708C2 /* Dto */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dto;
 			sourceTree = "<group>";
 		};
 		A7660E1027FA0D9E003708C2 /* Model */ = {
@@ -211,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				A7660E2027FA0ECE003708C2 /* ViewModel */,
+				A7660E2527FA1078003708C2 /* NetworkClientMock.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -218,6 +187,8 @@
 		A7660E2027FA0ECE003708C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A7660E2127FA0FF4003708C2 /* MainScreenViewModelTests.swift */,
+				A7660E2327FA100D003708C2 /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -323,13 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A703E0B127F87D9F00DC418F /* NetworkService.swift in Sources */,
 				275AA55A26A7034E008B8877 /* Photo.swift in Sources */,
-				A703E0AF27F87D3600DC418F /* BaseTarget.swift in Sources */,
 				A703E0A427F87B3C00DC418F /* MainScreenViewModel.swift in Sources */,
-				A703E0A627F87C5300DC418F /* PhotoRepositoryImpl.swift in Sources */,
 				27D56EBF26A6F3E90076B828 /* ViewController.swift in Sources */,
 				27D56EBD26A6F3E90076B828 /* AppDelegate.swift in Sources */,
+				A7660E2827FA1D3B003708C2 /* PhotoCellViewModel.swift in Sources */,
 				275AA55C26A703B3008B8877 /* PhotoResponse.swift in Sources */,
 				275AA55E26A7070D008B8877 /* PhotoCell.swift in Sources */,
 				275AA55826A6F828008B8877 /* NetworkClient.swift in Sources */,
@@ -341,6 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7660E1827FA0EB2003708C2 /* AM_ExerciseTests.swift in Sources */,
+				A7660E2627FA1078003708C2 /* NetworkClientMock.swift in Sources */,
+				A7660E2427FA100D003708C2 /* ViewModel.swift in Sources */,
+				A7660E2227FA0FF4003708C2 /* MainScreenViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
