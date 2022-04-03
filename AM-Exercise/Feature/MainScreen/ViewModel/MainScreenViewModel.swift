@@ -9,6 +9,7 @@ import Foundation
 
 protocol MainScreenViewModelProtocol {
     var photos: [Photo] { get }
+    var page: Int { get set }
     var showAlert: ((String) -> Void)? { get set }
     var updateView: (() -> Void)? { get set }
     func loadPhotos()
@@ -21,16 +22,9 @@ final class MainScreenViewModel: MainScreenViewModelProtocol {
     var showAlert: ((String) -> Void)?
     var updateView: (() -> Void)?
     var photos: [Photo] = []
-    
-    var handleDataCallback: ((Result<[Photo], Error>) -> Void)!
+    var page: Int = 1
     
     // MARK: - Private properties
-    
-    //    private let photoRepository: PhotoRepository
-    //
-    //    init(photoRepository: PhotoRepository) {
-    //        self.photoRepository = photoRepository
-    //    }
     
     private let networkClient: NetworkClientProtocol
     
@@ -41,8 +35,8 @@ final class MainScreenViewModel: MainScreenViewModelProtocol {
     // MARK: - Public methods
     
     func loadPhotos() {
-        networkClient.fetchImages(for: "ball") { [unowned self] result in
-            
+        networkClient.fetchImages(for: "ball", page: page) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let downLoadedPhotos):
                 self.photos.append(contentsOf: downLoadedPhotos)

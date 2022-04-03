@@ -8,19 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private enum Consts {
         static let backgroundColor = UIColor.darkGray
         static let title = "Photos"
-        static let noDataTitle = "No data loaded"
+        static let noDataTitle = "No data loaded\nplease try to refresh"
+        static let padding: CGFloat = 10
+        static let semaphoreLimitValue = 16
+        static let queueLabel = "com.exercise.AM-Exercise.operations.queue"
     }
     
     private lazy var refreshControl = UIRefreshControl()
+    private let operationQueue = OperationQueue()
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.contentInsetAdjustmentBehavior = .always
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.backgroundColor = Consts.backgroundColor
@@ -38,7 +41,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = Consts.title
+        setOperations()
         binding()
         addedRefreshControl()
         viewModel?.loadPhotos()
@@ -65,9 +70,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
                 self.showAlert(message)
-                self.setBackgroundText()
+                if self.viewModel?.page ?? 1 == 1 {
+                    self.setBackgroundText()
+                }
             }
         }
+    }
+    
+    private func setOperations() {
+        operationQueue.name = Consts.queueLabel
+        operationQueue.maxConcurrentOperationCount = 16
+        operationQueue.qualityOfService = .background
     }
     
     private func setBackgroundText() {
@@ -79,6 +92,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     private func showAlert(_ message: String) {
+        if viewModel?.page ?? 1 > 1 {
+            viewModel?.page -= 1
+        }
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel)
         alert.addAction(action)
@@ -93,6 +109,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc private func refresh() {
         guard !isLoading else { return }
         isLoading = true
+        viewModel?.page = 1
         viewModel?.loadPhotos()
     }
     
@@ -101,20 +118,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat = 20
-           let collectionViewSize = collectionView.frame.size.width - 3 * padding
+        let collectionViewSize = collectionView.frame.size.width - 3 * Consts.padding
         return CGSize(width: collectionViewSize/2, height: collectionViewSize/3.7)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: Consts.padding, left: Consts.padding, bottom: Consts.padding, right: Consts.padding)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(10)
+        return CGFloat(Consts.padding)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(10)
+        return CGFloat(Consts.padding)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -123,33 +139,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let photo = viewModel?.photos[indexPath.row] else {
+        guard
+            let photo = viewModel?.photos[indexPath.row],
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell
+        else {
             return UICollectionViewCell()
         }
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else {
-            return UICollectionViewCell()
+        operationQueue.addOperation {
+            cell.setImage(on: photo.previewURL ?? photo.largeImageURL)
         }
         
-        cell.imageView.setImage(on: photo.largeImageURL)
-        cell.label.text = "Author: " //Author of photo
+        cell.fillData(photo: photo)
+        
         return cell
     }
-}
-
-extension UIImageView {
-    func setImage(on urlString: String) {
-        let networkClient = NetworkClient()
-        networkClient.fetchImage(on: urlString) {result in
-            switch result {
-            case .success(let image):
-                DispatchQueue.main.async {
-                    print("fetched \(urlString)")
-                    self.image = image
-                }
-            case .failure:
-                self.image = nil
-            }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == (viewModel?.photos.count ?? 0) - 10 {
+            viewModel?.page += 1
+            viewModel?.loadPhotos()
         }
     }
 }
