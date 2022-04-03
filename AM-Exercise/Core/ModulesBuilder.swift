@@ -17,7 +17,7 @@ final class ModulesBuilder: ModulesBuilderProtocol {
     // MARK: - Public Properties
 
     let coordinator: MainCoordinator
-    static let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
+    static let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .current)
 
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator

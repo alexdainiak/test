@@ -10,14 +10,11 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
+    
     // MARK: - Private Properties
 
     private var moduleBuilder: ModulesBuilderProtocol?
-
-    // MARK: - Public Properties
-
     private(set) var childCoordinators: [Coordinator] = []
-
     private(set) var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
