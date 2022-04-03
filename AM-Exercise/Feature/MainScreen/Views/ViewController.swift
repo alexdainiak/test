@@ -36,7 +36,7 @@ final class ViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.viewModel = MainScreenViewModel(networkClient: NetworkClient())
+        self.viewModel = MainScreenViewModel(networkClient: NetworkClient(urlSession: session))
     }
     
     override func viewDidLoad() {

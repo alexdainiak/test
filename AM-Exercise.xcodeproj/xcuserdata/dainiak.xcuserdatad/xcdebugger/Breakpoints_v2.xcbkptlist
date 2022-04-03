@@ -264,7 +264,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D4A339BD-CB0D-4C76-B14F-042C1124E1ED"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AM-Exercise/Feature/MainScreen/ViewModel/MainScreenViewModel.swift"
@@ -280,7 +280,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AEEAB3F6-FEA7-4CF4-872E-7869F96A140C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AM-Exercise/Feature/MainScreen/ViewModel/MainScreenViewModel.swift"
@@ -449,6 +449,498 @@
             startingLineNumber = "32"
             endingLineNumber = "32"
             landmarkName = "testSuccessfullPhotosResponce()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1AB66B3-9C9D-4271-B5D9-1847F6E0A6BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-Exercise/Feature/MainScreen/ViewModel/PhotoCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "setImage(on:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83A4C832-5E18-410A-8653-73DEC8D65EDD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-Exercise/Feature/MainScreen/ViewModel/PhotoCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "setImage(on:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59E39CF6-63A4-4D88-B6FF-BF4496F61D70"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-Exercise/Feature/MainScreen/ViewModel/PhotoCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "setImage(on:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C655EF47-9D9C-4B93-B741-11225495A2A9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/ViewModel/PhotoCellViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "testSuccessfullImageResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA976266-3133-492A-ABBF-963715FB8AC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-Exercise/Feature/MainScreen/ViewModel/PhotoCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "setImage(on:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E76E1778-5438-411E-A24F-BE9E7D9FE047"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-Exercise/Feature/MainScreen/ViewModel/PhotoCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "init(photo:networkClient:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FAD9232-D39E-4E0E-886D-72F5CCD5F3FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/ViewModel/PhotoCellViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "testSuccessfullImageResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB4FF1C7-1EB0-4AA5-B3DD-DF831BA3F213"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/NetworkClientMock.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(resultPhoto:resultImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE98FE6B-4E75-453A-AD47-71D18A5DDA3C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "testSuccessfullPhotosResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF347778-784F-4BD2-8CE5-737A9FEBB172"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "testEmptyDataPhotosResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AF347778-784F-4BD2-8CE5-737A9FEBB172 - 6b70b86a5de9f7a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "434">
+               </Location>
+               <Location
+                  uuid = "AF347778-784F-4BD2-8CE5-737A9FEBB172 - 9ddfeb44ad1c996c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "AF347778-784F-4BD2-8CE5-737A9FEBB172 - 9ddfeb44ad1c996c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "403">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7772A1A2-319A-4893-A70C-7C8F48A45235"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "testEmptyDataPhotosResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7772A1A2-319A-4893-A70C-7C8F48A45235 - 6b70b86a5de9f784"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "493">
+               </Location>
+               <Location
+                  uuid = "7772A1A2-319A-4893-A70C-7C8F48A45235 - 9ddfeb44ad1c9932"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "469">
+               </Location>
+               <Location
+                  uuid = "7772A1A2-319A-4893-A70C-7C8F48A45235 - 9ddfeb44ad1c9932"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "462">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50606C76-1E03-4F7C-9244-E26552D303DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "testEmptyDataPhotosResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50606C76-1E03-4F7C-9244-E26552D303DE - 6b70b86a5de9f7fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "50606C76-1E03-4F7C-9244-E26552D303DE - 9ddfeb44ad1c994d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testEmptyDataRecipeResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "199">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C410A845-FAE7-43D1-83FE-131E6204C78F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "testInvalidJsonResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C410A845-FAE7-43D1-83FE-131E6204C78F - 5744e56ad03ba1ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AM_ExerciseTests.NetworkClientTests.testInvalidJsonResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "1143">
+               </Location>
+               <Location
+                  uuid = "C410A845-FAE7-43D1-83FE-131E6204C78F - a0943206f7368627"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testInvalidJsonResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "91">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A58071F2-4DA2-42D5-BC9D-53454D80C088"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "testTransportErrorFromResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "944CFAD4-1588-43CD-93BC-A6AB353BBEFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "testServiceErrorFromResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "944CFAD4-1588-43CD-93BC-A6AB353BBEFD - ea592a8a99f4d128"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testServiceErrorFromResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "335">
+               </Location>
+               <Location
+                  uuid = "944CFAD4-1588-43CD-93BC-A6AB353BBEFD - ea592a8a99f4d128"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testServiceErrorFromResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "455">
+               </Location>
+               <Location
+                  uuid = "944CFAD4-1588-43CD-93BC-A6AB353BBEFD - ea592a8a99f4d1c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testServiceErrorFromResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "305">
+               </Location>
+               <Location
+                  uuid = "944CFAD4-1588-43CD-93BC-A6AB353BBEFD - ea592a8a99f4d1c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AM_ExerciseTests.NetworkClientTests.testServiceErrorFromResponse() -&gt; ()"
+                  moduleName = "AM-ExerciseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dainiak/Project/AM-Exercise/AM-ExerciseTests/Feature/MainScreen/Services/NetworkClientTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "422">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D3E582F-F9C2-46A6-A815-2AE8C8394B57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/ViewModel/PhotoCellViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "testSuccessfullImageResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ECF6942-5FE4-466B-86C1-ED150EE7480A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AM-ExerciseTests/Feature/MainScreen/ViewModel/PhotoCellViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "testSuccessfullImageResponse()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

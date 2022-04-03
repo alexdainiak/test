@@ -25,6 +25,6 @@ class NetworkClientMock: NetworkClientProtocol {
     }
     func fetchImage(on urlString: String, completion: @escaping (Result<UIImage, NetworkClient.Error>) -> Void) -> URLSessionDataTask? {
         completion(resultImage)
-        return nil
+        return URLSessionDataTask()
     }
 }

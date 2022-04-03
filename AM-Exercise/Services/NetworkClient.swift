@@ -10,6 +10,14 @@ import Foundation
 import UIKit
 
 let imageCache = NSCache<NSString, UIImage>()
+let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
+
+protocol URLSessionProtocol {
+     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+     
+}
+
+extension URLSession: URLSessionProtocol {}
 
 protocol NetworkClientProtocol {
      func fetchImages(for query: String, page: Int, completion: @escaping (Result<[Photo], NetworkClient.Error>) -> Void)
@@ -25,9 +33,14 @@ final class NetworkClient: NetworkClientProtocol {
           case parsing(error: Swift.Error)
      }
      
-     private let urlSession = URLSession.shared
      private let apiKey = "22577733-edb14e0d0f3f9c1a039c57e48"
      private let baseURL = "https://pixabay.com/api/"
+     
+     var urlSession: URLSessionProtocol
+     
+     init(urlSession: URLSessionProtocol) {
+          self.urlSession = urlSession
+     }
      
      func fetchImages(for query: String, page: Int = 1, completion: @escaping (Result<[Photo], Error>) -> Void) {
           guard let url = URL(string: "\(baseURL)?key=\(apiKey)&q=\(query)&image_type=photo&page=\(page)&per_page=25") else {

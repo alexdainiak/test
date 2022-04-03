@@ -30,7 +30,7 @@ final class PhotoCell: UICollectionViewCell {
     }
     
     func fillData(photo: Photo) {
-        viewModel = PhotoCellViewModel(photo: photo, networkClient: NetworkClient())
+        viewModel = PhotoCellViewModel(photo: photo, networkClient: NetworkClient(urlSession: session))
         
         label.text = viewModel?.labelText
         descriptionLabel.text = viewModel?.descriptionText
