@@ -10,6 +10,8 @@ import UIKit
 
 final class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    // MARK: - Nested enum
+    
     private enum Consts {
         static let backgroundColor = UIColor.darkGray
         static let title = "Photos"
@@ -19,10 +21,13 @@ final class ViewController: UIViewController, UICollectionViewDelegate, UICollec
         static let queueLabel = "com.exercise.AM-Exercise.operations.queue"
     }
     
+    // MARK: - Private properties
+    
     private lazy var refreshControl = UIRefreshControl()
     private let operationQueue = OperationQueue()
+    private var isLoading = false
     
-    @IBOutlet weak var collectionView: UICollectionView! {
+    @IBOutlet weak private var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
@@ -30,14 +35,9 @@ final class ViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
     }
     
-    private var isLoading = false
+    // MARK: - Public properties
     
-    private var viewModel: MainScreenViewModelProtocol?
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.viewModel = MainScreenViewModel(networkClient: NetworkClient(urlSession: session))
-    }
+    var viewModel: MainScreenViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,6 +112,8 @@ final class ViewController: UIViewController, UICollectionViewDelegate, UICollec
         viewModel?.page = 1
         viewModel?.loadPhotos()
     }
+    
+    // MARK: - Delegate methods
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

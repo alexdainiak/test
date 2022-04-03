@@ -11,6 +11,8 @@ import UIKit
 
 final class PhotoCell: UICollectionViewCell {
     
+    // MARK: - Private properties
+    
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             imageView.layer.cornerRadius = 6
@@ -29,8 +31,10 @@ final class PhotoCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    // MARK: - Public methods
+    
     func fillData(photo: Photo) {
-        viewModel = PhotoCellViewModel(photo: photo, networkClient: NetworkClient(urlSession: session))
+        viewModel = PhotoCellViewModel(photo: photo, networkClient: NetworkClient(urlSession: ModulesBuilder.session))
         
         label.text = viewModel?.labelText
         descriptionLabel.text = viewModel?.descriptionText

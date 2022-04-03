@@ -17,9 +17,14 @@ protocol PhotoCellViewModelProtocol {
 }
 
 final class PhotoCellViewModel: PhotoCellViewModelProtocol {
+    
+    // MARK: - Public properties
+    
     var labelText: String?
     var descriptionText: String?
 
+    // MARK: - Private properties
+    
     private var task: URLSessionDataTask?
     private var imageUrl: String?
     private var networkClient: NetworkClientProtocol?
@@ -30,6 +35,8 @@ final class PhotoCellViewModel: PhotoCellViewModelProtocol {
         labelText =  "Author: \n\(photo.user)"
         descriptionText = "Photo ID:\n\(photo.id)"
     }
+    
+    // MARK: - Public methods
     
     func setImage(on urlString: String, completion: @escaping (UIImage?) -> Void) {
         if task == nil {
